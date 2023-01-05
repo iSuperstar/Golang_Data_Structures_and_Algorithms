@@ -31,8 +31,8 @@ All types of sorting algorithms such as:
 - ShellSort
 - TimSort
 - Comb Sort
-- 
 - Pigeonhole Sort
+
 https://www.geeksforgeeks.org/sorting-algorithms/
 
 And overall I wanted to create this so that future Go developers (or even experienced ones) can reference back to this repo and not feel overwhelmed with having to research.
