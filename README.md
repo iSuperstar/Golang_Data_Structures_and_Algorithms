@@ -14,9 +14,7 @@ All types of search algorithms such as:
 - Binary Search
 - Ternary Search
 - Jump Search
-- Interpolation Search
-- Exponential Search
-- Fibonacci Search
+
 https://www.geeksforgeeks.org/searching-algorithms/
 
 All types of sorting algorithms such as:
@@ -33,6 +31,7 @@ All types of sorting algorithms such as:
 - ShellSort
 - TimSort
 - Comb Sort
+- 
 - Pigeonhole Sort
 https://www.geeksforgeeks.org/sorting-algorithms/
 
