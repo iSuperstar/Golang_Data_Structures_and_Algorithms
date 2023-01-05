@@ -12,13 +12,11 @@ All types of search algorithms such as:
 - Linear Search
 - Sentinel Linear Search
 - Binary Search
-- Meta Binary Search | One-Sided Binary Search
 - Ternary Search
 - Jump Search
 - Interpolation Search
 - Exponential Search
 - Fibonacci Search
-- The Ubiquitous Binary Search
 https://www.geeksforgeeks.org/searching-algorithms/
 
 All types of sorting algorithms such as:
