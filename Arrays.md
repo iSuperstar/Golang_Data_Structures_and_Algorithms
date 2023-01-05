@@ -63,3 +63,37 @@ isEmpty := len(words) == 0
 
 # Associative Array
 ```go
+// Create a map that maps strings to integers.
+// The map is initialized as empty.
+var m map[string]int
+
+// Set the value for the key "apple".
+m["apple"] = 1
+
+// Get the value for the key "banana".
+x := m["banana"]
+
+// Check if the key "cherry" is in the map.
+_, ok := m["cherry"]
+
+// Iterate over the key-value pairs in the map.
+for key, value := range m {
+    fmt.Printf("Key: %s, Value: %d\n", key, value)
+}
+
+// Create a map that maps strings to strings and initialize it with values.
+colors := map[string]string{
+    "red":   "#ff0000",
+    "green": "#00ff00",
+    "blue":  "#0000ff",
+}
+
+// Get the number of key-value pairs in the map.
+numEntries := len(colors)
+
+// Check if the map is empty.
+isEmpty := len(colors) == 0
+
+// Delete a key-value pair from the map.
+delete(colors, "red")
+```
