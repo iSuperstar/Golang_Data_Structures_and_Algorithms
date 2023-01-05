@@ -8,6 +8,36 @@ This repo will contain every snippet of code that pertains to some data structur
 - Stacks
 - Queues
 
+All types of search algorithms such as:
+- Linear Search
+- Sentinel Linear Search
+- Binary Search
+- Meta Binary Search | One-Sided Binary Search
+- Ternary Search
+- Jump Search
+- Interpolation Search
+- Exponential Search
+- Fibonacci Search
+- The Ubiquitous Binary Search
+https://www.geeksforgeeks.org/searching-algorithms/
+
+All types of sorting algorithms such as:
+- Selection Sort
+- Bubble Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
+- Heap Sort
+- Counting Sort
+- Radix Sort
+- Bucket Sort
+- Bingo Sort Algorithm
+- ShellSort
+- TimSort
+- Comb Sort
+- Pigeonhole Sort
+https://www.geeksforgeeks.org/sorting-algorithms/
+
 And overall I wanted to create this so that future Go developers (or even experienced ones) can reference back to this repo and not feel overwhelmed with having to research.
 
 I will continually update this repo as best as I can, but be aware that I am *NOT* a professional developer, just some dude who felt like sharing knowledge.
