@@ -92,3 +92,28 @@ func TernarySearch(slice []int, target int) int {
 
 # Jump Search
 ```go
+// JumpSearch performs a jump search for the target value in the slice.
+// The slice must be sorted in ascending order.
+// If the target value is found, the function returns the index at which the target value is found.
+// If the target value is not found, the function returns -1.
+func JumpSearch(slice []int, target int) int {
+    n := len(slice)
+    step := int(math.Sqrt(float64(n)))
+
+    prev := 0
+    for slice[int(math.Min(float64(step), float64(n)))-1] < target {
+        prev = step
+        step += int(math.Sqrt(float64(n)))
+        if prev >= n {
+            return -1
+        }
+    }
+
+    for i := prev; i < int(math.Min(float64(step), float64(n))); i++ {
+        if slice[i] == target {
+            return i
+        }
+    }
+    return -1
+}
+```
