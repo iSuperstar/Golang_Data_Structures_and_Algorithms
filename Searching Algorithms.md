@@ -59,3 +59,36 @@ func BinarySearch(slice []int, target int) int {
     return -1
 }
 ```
+
+# Ternary Search
+```go
+// TernarySearch performs a ternary search for the target value in the slice.
+// The slice must be sorted in ascending order.
+// If the target value is found, the function returns the index at which the target value is found.
+// If the target value is not found, the function returns -1.
+func TernarySearch(slice []int, target int) int {
+    low := 0
+    high := len(slice) - 1
+
+    for low <= high {
+        mid1 := low + (high-low)/3
+        mid2 := high - (high-low)/3
+        if slice[mid1] == target {
+            return mid1
+        } else if slice[mid2] == target {
+            return mid2
+        } else if slice[mid1] < target {
+            low = mid1 + 1
+        } else if slice[mid2] > target {
+            high = mid2 - 1
+        } else {
+            low = mid1 + 1
+            high = mid2 - 1
+        }
+    }
+    return -1
+}
+```
+
+# Jump Search
+```go
