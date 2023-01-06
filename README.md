@@ -8,7 +8,7 @@ This repo will contain every snippet of code that pertains to some data structur
 - Stacks
 - Queues
 
-All types of search algorithms such as:
+Searching algorithms such as:
 - Linear Search
 - Sentinel Linear Search
 - Binary Search
@@ -17,7 +17,7 @@ All types of search algorithms such as:
 
 https://www.geeksforgeeks.org/searching-algorithms/
 
-All types of sorting algorithms such as:
+Sorting algorithms such as:
 - Selection Sort
 - Bubble Sort
 - Insertion Sort
