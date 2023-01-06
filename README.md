@@ -24,13 +24,8 @@ All types of sorting algorithms such as:
 - Merge Sort
 - Quick Sort
 - Heap Sort
-- Counting Sort
 - Radix Sort
-- Bucket Sort
-- Bingo Sort Algorithm
-- ShellSort
-- TimSort
-- Comb Sort
+- Shell Sort
 - Pigeonhole Sort
 
 https://www.geeksforgeeks.org/sorting-algorithms/
