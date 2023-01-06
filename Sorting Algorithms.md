@@ -279,3 +279,50 @@ func element(a, b int) int {
     return e
 }
 ```
+
+# Pigeonhole Sort
+```go
+func pigeonholeSort(arr []int) {
+	max := getMax(arr)
+	min := getMin(arr)
+	n := max - min + 1
+
+	holes := make([]int, n)
+	for i := 0; i < len(arr); i++ {
+		holes[arr[i]-min]++
+	}
+
+	j := 0
+	for i := 0; i < n; i++ {
+		for holes[i] > 0 {
+			arr[j] = i + min
+			holes[i]--
+			j++
+		}
+	}
+}
+
+func getMax(arr []int) int {
+	max := math.MinInt64
+
+	for i := 0; i < len(arr); i++ {
+		if arr[i] > max {
+			max = arr[i]
+		}
+	}
+
+	return max
+}
+
+func getMin(arr []int) int {
+	min := math.MaxInt64
+
+	for i := 0; i < len(arr); i++ {
+		if arr[i] < min {
+			min = arr[i]
+		}
+	}
+
+	return min
+}
+```
