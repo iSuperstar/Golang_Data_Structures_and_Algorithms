@@ -1,24 +1,37 @@
 # Simple Selection Sort
 ```go
+// seletionSort function that takes in an array of integers
 func selectionSort(arr []int) {
+    // length of the array
 	n := len(arr)
 
+	// outer loop to iterte through each element in the array
 	for i := 0; i < n; i++ {
+		// initialize minIndex as i
 		minIndex := i
 
+		// innr loop to find the minimum element
 		for j := i + 1; j < n; j++ {
+			// check if the current element is less than the minimum element
 			if arr[j] < arr[minIndex] {
+				// update the miIndex with the current element's index
 				minIndex = j
 			}
 		}
 
+		// swap the elemnts at i and minIndex
 		arr[i], arr[minIndex] = arr[minIndex], arr[i]
 	}
 }
+
 ```
 
 # Bubble Sort
 ```go
+// Implements bubble sort algortihm
+// Loops thorugh the array multiple times
+// Compares adjacent elements and swaps them if the left one is greater
+// Continues until no more swaps are made
 func bubbleSort(arr []int) {
 	n := len(arr)
 
@@ -27,20 +40,25 @@ func bubbleSort(arr []int) {
 
 		for j := 0; j < n-i-1; j++ {
 			if arr[j] > arr[j+1] {
-				arr[j], arr[j+1] = arr[j+1], arr[j]
+				arr[j], arr[j+1] = arr[j+1], arr[j] // Swap the elmments if the left one is greater
 				swapped = true
 			}
 		}
 
-		if !swapped {
+		if !swapped { // If no swap happened, break
 			break
 		}
 	}
 }
+
 ```
 
 # Insertion Sort
 ```go
+// Implement insertion sort algorithm
+// Loop through arr and compare each elmment to ones before it
+// If an elmment is found to be less, shift it to the left
+// Continue until all elmments are in the right order
 func insertionSort(arr []int) {
 	n := len(arr)
 
@@ -57,22 +75,27 @@ func insertionSort(arr []int) {
 	}
 }
 
+
 ```
 
 # Merge Sort
 ```go
+// Implements merge sort algorithm
+// Recursively divide array into halves until each subarray has only 1 element
+// Then merge the subarrays back together in sorted order
 func mergeSort(arr []int) []int {
-	if len(arr) <= 1 {
+	if len(arr) <= 1 { // base case: return array if length is 1 or less
 		return arr
 	}
 
-	mid := len(arr) / 2
-	left := mergeSort(arr[:mid])
-	right := mergeSort(arr[mid:])
+	mid := len(arr) / 2 // divide the array in half
+	left := mergeSort(arr[:mid]) // sort the left half
+	right := mergeSort(arr[mid:]) // sort the right half
 
-	return merge(left, right)
+	return merge(left, right) // merge the sorted halves back together
 }
 
+// Helper function to merge two sorted arrays into one sorted array
 func merge(left, right []int) []int {
 	result := make([]int, 0, len(left)+len(right))
 
@@ -83,7 +106,7 @@ func merge(left, right []int) []int {
 		if len(right) == 0 {
 			return append(result, left...)
 		}
-		if left[0] <= right[0] {
+		if left[0] <= right[0] { // add the smaller of the first elements to the result
 			result = append(result, left[0])
 			left = left[1:]
 		} else {
